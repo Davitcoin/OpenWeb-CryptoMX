@@ -16,6 +16,13 @@ module.exports = {
     network_id: 11155111,
     skipDryRun: true,
   },
+  goerli: {
+    provider: function () {
+      return new HDWalletProvider(process.env.PRIVATE_KEY, process.env.GOERLI_RPC_URL);
+    },
+    network_id: 5,
+    skipDryRun: true,
+  },
   }, 
   compilers: {
     solc: {
